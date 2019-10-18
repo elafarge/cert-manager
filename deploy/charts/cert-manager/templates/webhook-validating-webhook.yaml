@@ -49,6 +49,7 @@ webhooks:
     failurePolicy: Fail
     sideEffects: None
     clientConfig:
+      caBundle: ""
       service:
         name: {{ include "webhook.fullname" . }}
         namespace: {{ .Release.Namespace | quote }}
